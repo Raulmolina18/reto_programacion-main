@@ -12,9 +12,9 @@ public class Gestion {
 
     
         int totalStock = calcularTotalStock(producto1, producto2, producto3, producto4, producto5, producto6);
-        int embutidosC = contarCategoria("Embutidos", producto1, producto2, producto3, producto4, producto5, producto6);
-        int carneC = contarCategoria("Carne", producto1, producto2, producto3, producto4, producto5, producto6);
-        int hamburguesasC = contarCategoria("Hamburguesas", producto1, producto2, producto3, producto4, producto5, producto6);
+        int embutidosC = Categoria("Embutidos", producto1, producto2, producto3, producto4, producto5, producto6);
+        int carneC = Categoria("Carne", producto1, producto2, producto3, producto4, producto5, producto6);
+        int hamburguesasC = Categoria("Hamburguesas", producto1, producto2, producto3, producto4, producto5, producto6);
 
     
         System.out.println("Cantidad total de stock disponible: " + totalStock);
@@ -25,7 +25,7 @@ public class Gestion {
     }
 
 
-    public static int contarCategoria(String categoria, Producto producto1, Producto producto2, Producto producto3, Producto producto4, Producto producto5, Producto producto6) {
+    public static int Categoria(String categoria, Producto producto1, Producto producto2, Producto producto3, Producto producto4, Producto producto5, Producto producto6) {
         int cont = 0;
         if (producto1.getCategoria().equals(categoria)) cont++;
         if (producto2.getCategoria().equals(categoria)) cont++;
